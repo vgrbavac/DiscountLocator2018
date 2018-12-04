@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         startMainModule();
 
         AppCenter.start(getApplication(), "e0d323bd-f20c-48be-9388-923de1c6833f", Analytics.class, Crashes.class);
+
+        Analytics.trackEvent("Ovo je main!");
     }
 
     private void setCurrentActivity() {

@@ -22,6 +22,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 import java.util.List;
 
 import air18.foi.hr.database.entities.Discount;
@@ -50,6 +54,7 @@ public class MapFragment extends Fragment implements NavigationItem, OnMapReadyC
                 .findFragmentById(R.id.map);
 
         mapFragment.getMapAsync(this);
+        Analytics.trackEvent("Ovo je main!");
     }
 
     @Override
